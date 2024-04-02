@@ -1,0 +1,25 @@
+-- --liquibase formatted sql
+-- --changeset Kvasov:1
+--
+-- CREATE TABLE users (
+--     id SERIAL PRIMARY KEY,
+--     username TEXT,
+--     password TEXT
+-- );
+--
+-- CREATE TABLE portfolios (
+--     id SERIAL PRIMARY KEY,
+--     name TEXT,
+--     description TEXT,
+--     user_id INTEGER,
+--     FOREIGN KEY (user_id) REFERENCES users(id)
+-- );
+--
+-- CREATE TABLE investments (
+--     id SERIAL PRIMARY KEY,
+--     type TEXT,
+--     quantity INTEGER,
+--     purchasePrice NUMERIC(10, 2),
+--     portfolio_id INTEGER,
+--     FOREIGN KEY (portfolio_id) REFERENCES portfolios(id)
+-- );

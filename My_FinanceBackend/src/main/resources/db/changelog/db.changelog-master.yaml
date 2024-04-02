@@ -1,0 +1,5 @@
+---
+databaseChangeLog:
+  - include:
+      file: bd.sql
+      relativeToChangelogFile: true

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/chooseOptionFragment">
+
+    <fragment
+        android:id="@+id/chooseOptionFragment"
+        android:name="com.example.my_finance.ui.ChooseOptionActivity"
+        android:label="Choose Option"
+        tools:layout="@layout/activity_choose_option" >
+        <action
+            android:id="@+id/action_chooseOptionFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_chooseOptionFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.my_finance.ui.LoginActivity"
+        android:label="Login"
+        tools:layout="@layout/activity_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_mainActivity"
+            app:destination="@id/mainActivity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.example.my_finance.ui.RegistrationActivity"
+        android:label="Registration"
+        tools:layout="@layout/activity_registration" >
+        <action
+            android:id="@+id/action_registrationFragment_to_mainActivity"
+            app:destination="@id/mainActivity" />
+    </fragment>
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.my_finance.MainActivity"
+        android:label="Main Activity" >
+    </activity>
+</navigation>
